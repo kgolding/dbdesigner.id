@@ -3,7 +3,8 @@ const inquirer = require('inquirer')
 
 module.exports = {
     async action(username) {
-        var isUsernameExist = await axios.get(`http://localhost/api/v1/admin/user/getOne?username=${username}`)
+        const port = process.env.APP_PORT || 80
+        var isUsernameExist = await axios.get(`http://localhost:${port}/api/v1/admin/user/getOne?username=${username}`)
         if (isUsernameExist.data.success != true) {
             return console.log("Error " + isUsernameExist.data.message)
         }
@@ -43,7 +44,7 @@ module.exports = {
 
         inquirer.prompt(questions).then(async answers => {
 
-            var respond = await axios.post("http://localhost/api/v1/admin/user/edit", {
+            var respond = await axios.post(`http://localhost:${port}/api/v1/admin/user/edit`, {
                 user_name: username,
                 complete_name: answers.complete_name,
                 gender: answers.gender,

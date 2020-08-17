@@ -3,7 +3,8 @@ const inquirer = require('inquirer')
 
 module.exports = {
     async action(username) {
-        var respond = await axios.get(`http://localhost/api/v1/admin/user/getOne?username=${username}`)
+        const port = process.env.APP_PORT || 80
+        var respond = await axios.get(`http://localhost:${port}/api/v1/admin/user/getOne?username=${username}`)
         console.log("Respond detail user : ")
         if (respond.data.success === true) {
             var user = respond.data.payload

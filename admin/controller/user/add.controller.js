@@ -43,8 +43,9 @@ module.exports = {
         ];
 
         inquirer.prompt(questions).then(async answers => {
+            const port = process.env.APP_PORT || 80
             console.log(JSON.stringify(answers, null, '  '));
-            var respond = await axios.post("http://localhost/api/v1/admin/user/add", answers)
+            var respond = await axios.post(`http://localhost:${port}/api/v1/admin/user/add`, answers)
             console.log("Respond :")
             if (respond.data.success === true) {
                 var user = respond.data.payload

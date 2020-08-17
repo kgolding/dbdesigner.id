@@ -28,6 +28,14 @@ You can install this database designer in your private server too.
 Database designer user admin CLI to manage all backend. This can make simple  use this database designer in
 private server without integration with email. 
 `admin/admin.js` is main entry point.
+
+> The admin CLI requires that the backend is running on localhost (default port 80 else set env APP_PORT).
+
+### Setup
+
+1. `cd admin`
+1. `npm install`
+
 ###  Add user
 ```
 # node admin/admin.js add user

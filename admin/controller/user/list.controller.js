@@ -13,7 +13,8 @@ module.exports = {
         ];
 
         inquirer.prompt(questions).then(async answers => {
-            var respond = await axios.get(`http://localhost/api/v1/admin/user/list?keyword=${answers.keyword}`)
+            const port = process.env.APP_PORT || 80
+            var respond = await axios.get(`http://localhost:${port}/api/v1/admin/user/list?keyword=${answers.keyword}`)
             console.log("Respond get list user : ")
             if (respond.data.success === true) {
                 let count = 1;
