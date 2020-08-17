@@ -15,15 +15,14 @@ This database designer divide to 3 parts.
 
 You can install this database designer in your private server too.
 ## Instalation
-```
-# clone this repo
-# `cd frontend`
-# `npm install`
-# `npm run build`
-# `cd backend`
-# `npm install`
-# `node app` or `APP_PORT=8080 node app` to run on port 8080 rather than the default port 80
-```
+
+1. clone this repo
+1. `cd frontend`
+1. `npm install`
+1. `npm run build`
+1. `cd backend`
+1. `npm install`
+1. `node app` or `APP_PORT=8080 node app` to run on port 8080 rather than the default port 80
 
 ## How to use admin CLI
 Database designer user admin CLI to manage all backend. This can make simple  use this database designer in
