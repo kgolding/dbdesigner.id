@@ -4,7 +4,7 @@
  *
  */
 module.exports = {
-  port: 80,
+  port: process.env.APP_PORT || 80,
   url: process.env.APP_URL,
   secure: {
     status: false,

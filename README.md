@@ -17,10 +17,12 @@ You can install this database designer in your private server too.
 ## Instalation
 ```
 # clone this repo
-# cd frontend
-# npm run build
-# cd backend
-# node app
+# `cd frontend`
+# `npm install`
+# `npm run build`
+# `cd backend`
+# `npm install`
+# `node app` or `APP_PORT=8080 node app` to run on port 8080 rather than the default port 80
 ```
 
 ## How to use admin CLI
